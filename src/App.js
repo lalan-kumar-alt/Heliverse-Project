@@ -3,6 +3,7 @@ import axios from "axios";
 import Viewteam from "./Viewteam";
 import "./App.css";
 import Filter from "./Filter";
+import data from './db.json'
 import {
   MDBPagination,
   MDBPaginationItem,
@@ -21,7 +22,9 @@ function App() {
   const [sortFilterValue, setsortFilterValue] = useState("");
   const [operation, setoperation] = useState("");
   const [fordomain, setfordomain] = useState([]);
+
   const navigate = useNavigate();
+
   useEffect(() => {
     loadUserData(0, 20, 0, operation);
   }, []);
@@ -37,6 +40,7 @@ function App() {
             `http://localhost:5000/users?first_name=${firstNameValue}&_start=${start}&_end=${end}`
           )
           .then((response) => {
+            console.log("THIS",response)
             setData(response.data);
             setCurrentPage(currentPage + increase);
           })

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-
+import data from './db.json'
 const Filter = () => {
   const [domainValue, setDomainValue] = useState("");
   const [genderValue, setGenderValue] = useState("");
