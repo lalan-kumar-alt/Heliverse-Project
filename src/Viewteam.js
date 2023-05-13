@@ -5,13 +5,11 @@ function Viewteam() {
   const [datat, setDatat] = useState([]);
   const myArray = [];
   const domains = new Set();
-  
   useEffect( () => {
  
       // const response = axios.get("http://localhost:5000/users");console.log(response);
-      const  response=data.users
-      console.log("OTPTPT",response)
-      const datal =  response
+      const response=data.users
+      const datal = response; console.log("response"+response)
       setDatat(datal);
       console.log(datat);
       datat.map((ele, index) => {
