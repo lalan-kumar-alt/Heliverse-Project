@@ -20,10 +20,10 @@ function Viewteam() {
         myArray.push(filteredData[0]);
       }
       console.log(myArray);
- 
+    
   }, []);
   return (
-    <>
+    <> <div>Hello</div>
       {myArray.map((ele, key) => {
         return (
           <div className="elements" key={key}>
